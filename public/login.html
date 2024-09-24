@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login with IVAO SSO</title>
+    <title>Welcome - ATCISS</title>
     <script>
         async function loginWithIVAO() {
             const response = await fetch('/getLoginUrl');
@@ -11,9 +11,13 @@
             window.location.href = data.loginUrl;
         }
     </script>
+    <link rel="stylesheet" href="./css/login.css">
 </head>
 <body>
-    <h1>IVAO Single Sign-On</h1>
-    <button onclick="loginWithIVAO()">Login with IVAO</button>
+    <div id="background-image"></div>
+    <div id="content">
+        <h1 id="h1-login">Welcome!</h1>
+        <button onclick="loginWithIVAO()" id="btn-login">Login using IVAO SSO</button>
+    </div>
 </body>
 </html>
