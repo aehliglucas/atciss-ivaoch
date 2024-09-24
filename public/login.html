@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login with IVAO SSO</title>
+    <script>
+        async function loginWithIVAO() {
+            const response = await fetch('/getLoginUrl');
+            const data = await response.json();
+            window.location.href = data.loginUrl;
+        }
+    </script>
+</head>
+<body>
+    <h1>IVAO Single Sign-On</h1>
+    <button onclick="loginWithIVAO()">Login with IVAO</button>
+</body>
+</html>
