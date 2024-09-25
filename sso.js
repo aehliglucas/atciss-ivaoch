@@ -26,7 +26,13 @@ async function getCurrentATCPosition(accessToken) {
     }
 }
 
+async function logout() {
+    const endpointURL = "https://sso.ivao.aero/logout";
+    await axios.get(endpointURL);
+}
+
 module.exports = {
     getAccessToken,
-    getCurrentATCPosition
+    getCurrentATCPosition,
+    logout
 };

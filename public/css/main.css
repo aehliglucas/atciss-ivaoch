@@ -1,0 +1,72 @@
+button {
+    background-color: #cfcfcf;
+    cursor: pointer;
+}
+
+.main-header {
+    display: flex;
+    flex-direction: row;
+    height: 9.9vh;
+    background-color: #2a6478;
+    border-bottom: 0.2vh solid white;
+}
+
+#header-divider-clock {
+    width: 8vw;
+}
+
+#header-divider-menu {
+    width: 30vw;
+}
+
+#header-divider-right {
+    display: flex;
+    flex-direction: row;
+    text-align: right;
+    margin-left: auto;
+}
+
+.p-current-pos {
+    margin: auto;
+    font-size: 1rem;
+    color: white;
+}
+
+.btn-logout {
+    margin: auto 1.5vw;
+    height: 50%;
+    width: 4vw;
+    border-radius: 2px;
+}
+
+.secondary-header {
+    height: 6.8vh;
+    background-color: #284d5a;
+    border-bottom: 0.3vh solid white;
+}
+
+#main-content {
+    height: 79vh;
+    background-color: #929292;
+}
+
+.menu-grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 0.5vh;
+}
+
+.menu-button {
+    height: 4vh;
+    width: 7vw;
+    margin-top: 0.5vh;
+}
+
+.button-disabled {
+    background-color: #b1b1b1;
+    cursor: default;
+}
+
+.button-active {
+    background-color: #ffd663;
+}
