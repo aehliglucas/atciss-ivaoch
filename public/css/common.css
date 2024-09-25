@@ -3,7 +3,11 @@
     padding: 0 0 0 0;
     font-family: 'Courier New', Courier, monospace;
     overflow: hidden;
+    @media (pointer: coarse)  {
+        overflow-y: visible;
+    }
 }
+
 
 body {
     height: auto;
