@@ -45,3 +45,14 @@ async function getContent(tab) {
 async function handleLogout() {
     window.location.href = "/logout"
 }
+
+function renderUTCClock() {
+    target = document.getElementById('utc-clock')
+    var d = new Date()
+    var s = d.getUTCSeconds()
+    var m = d.getUTCMinutes()
+    var h = d.getUTCHours();
+    target.textContent = ("0" + h).substr(-2) + ":" + ("0" + m).substr(-2) + ":" + ("0" + s).substr(-2) + "z";
+}
+
+setInterval(renderUTCClock, 1000)
