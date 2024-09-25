@@ -76,6 +76,10 @@ app.get('/loginError', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'login_error.html'));
 });
 
+app.get('/coordContent', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'content', 'coord.html'))
+})
+
 app.use(express.static('public'));
 
 

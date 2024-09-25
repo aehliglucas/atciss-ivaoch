@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 var ACTIVE_TAB = ""
 
-function getContent(tab) {
+async function getContent(tab) {
     var content_div = document.getElementById("main-content")
 
     if (ACTIVE_TAB == tab) {
@@ -28,7 +28,18 @@ function getContent(tab) {
 
     ACTIVE_TAB = tab
     document.getElementById(ACTIVE_TAB).classList.add("button-active")
-    content_div.innerHTML = "<p>Loaded " + tab + "</p>" 
+    
+    try {
+        const response = await fetch('/' + tab + 'Content');
+        if (response.ok) {
+            const htmlContent = await response.text();
+            content_div.innerHTML = htmlContent;
+        } else {
+            console.error('Error getting HTML content for ' + tab);
+        }
+    } catch (error) {
+        console.error('Error:', error);
+    }
 }
 
 async function handleLogout() {
