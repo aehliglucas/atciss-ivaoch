@@ -66,7 +66,7 @@ app.get('/login', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'login.html'));
 });
 
-app.get('/loginError', checkAuth, (req, res) => {
+app.get('/loginError', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'login_error.html'));
 });
 
